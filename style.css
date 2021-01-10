@@ -1,0 +1,261 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: radial-gradient(circle, hsl(214, 47%, 23%) , hsl(237, 49%, 15%)) ;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+.container{
+    border: 1px solid white;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    color: #1C2D4D;
+    width: 700px;
+    padding: 15px;
+    margin: 32px auto;
+}
+
+.score-board{
+    background-color: #ffffff;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 40px;
+    border-radius: 15px;
+}
+
+.score-board h1{
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #5F69AC;
+}
+
+.score{
+    font-size: 55px ;
+    font-weight: 700;
+    color: #57556B;
+}
+
+.game{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 500px;
+    justify-content: center;
+    margin: 0 auto;
+    background-image: url('images/bg-triangle.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.display-winner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #ffffff;
+    width: 700px;
+    margin: 60px auto 0 auto;
+    transition: ease 0.3s;
+    
+}
+
+.final-msg{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    
+    
+}
+.final-msg h1{
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+.btn-play{
+    outline: none;
+    border: none;
+    padding: 10px 30px;
+    margin-top: 15px ;
+    background-color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #AE4355;
+    border-radius: 10px;
+}
+
+.btn-play:hover{
+    background-color: #ebebeb;
+    transition: 0.3s ease;
+}
+
+
+.btn-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 9px;
+}
+
+.btn-wrapper h1{
+    margin-bottom: 60px ;
+}
+
+
+
+
+.btn{
+    
+    background-color: #E7E7E7;
+    border-radius: 50%; 
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+.btn-small{
+    width: 180px;
+    height: 180px;
+    border: 20px solid;
+}
+
+
+.btn-large{
+    width: 240px;
+    height: 240px;
+    border: 30px solid;
+}
+
+.btn:active{
+    
+    transform: translate(2px, 2px);
+}
+
+.btn-paper{
+    border-color:#5571F6;
+    box-shadow: 1px 8px  #2945C2,0 6px #BABFD2 inset;
+    
+    background-image: url(images/icon-paper.svg);
+    
+}
+.btn-paper:active{
+    box-shadow: 1px 4px  #2945C2,0 3px #BABFD2 inset;
+}
+
+.btn-scissors{
+    border-color:#EDA924;
+    box-shadow: 1px 8px  #C56E1A,0 6px #BABFD2 inset;
+    background-image: url(images/icon-scissors.svg);
+}
+
+.btn-scissors:active{
+    box-shadow: 1px 4px  #C56E1A,0 3px #BABFD2 inset;
+}
+
+
+.btn-rock{
+    border-color:#DD3453;
+    box-shadow: 1px 8px  #9E1632,0 6px #BABFD2 inset;
+    background-image: url(images/icon-rock.svg);
+    
+}
+
+.btn-rock:active{
+    box-shadow: 1px 4px  #9E1632,0 3px #BABFD2 inset;
+}
+
+.btn-rules{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+    outline: none;
+    background: rgba(0, 0, 0, 0);
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+.btn-rules:hover{
+    background: rgb(255, 255, 255);
+    color: #1C2D4D;
+    cursor: pointer;
+}
+
+.modal-bg{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    visibility: 0;
+    display: none;
+}
+.modal{
+    display: flex;
+    flex-direction:column ;
+    background: #ffffff;
+    width: 400px;
+    height: 400px;
+    border-radius: 15px ;
+    padding: 30px;
+}
+
+.modal-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 23px;
+}
+
+.rules{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-header h1{
+    color: #57556B;
+}
+
+.modal-active{
+    opacity: 1;
+    visibility: visible;
+    display: flex;
+}
+
+
+
+
+.remove-item{
+    display: none;
+}
+
+.mt-5{
+    margin-top: 50px;
+}
+.mr-8{
+    margin-right: 80px ;
+}
